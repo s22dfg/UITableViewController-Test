@@ -41,12 +41,11 @@ class MyTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "RE", for: indexPath)
         
         // Configure the cell...
-
+        cell.textLabel?.text = data[indexPath.row]
+        
         return cell
     }
     
